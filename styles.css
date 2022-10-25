@@ -1,0 +1,205 @@
+/* Reset Styles */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+:root {
+  font-size: 62.5%;
+}
+html {
+  position: relative;
+}
+body {
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+  background-color: rgb(44, 41, 38);
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+/* Navigation bar */
+
+#main-header {
+  height: 8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  background-color: rgb(29, 26, 24);
+}
+#logo {
+  padding: 15px;
+  font-size: 2.4rem;
+  color: rgb(238, 164, 80);
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+#main-header ul {
+  display: flex;
+  align-items: center;
+}
+
+#main-header ul li {
+  margin: 0 1.6rem;
+}
+nav ul li a {
+  font-size: 2rem;
+  color: rgb(185, 131, 31);
+  transition: all 0.2s ease-in-out;
+}
+nav ul li a:hover {
+  color: rgb(228, 163, 44);
+}
+
+.menu-btn {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 3rem;
+  height: 3rem;
+}
+
+.menu-btn span {
+  height: 3px;
+  width: 100%;
+  background-color: #fff;
+  margin-top: 0.5rem;
+}
+
+/* Side Drawer function */
+#side-drawer:target {
+  display: block;
+}
+#side-drawer {
+  display: none;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(29, 26, 27);
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+#side-drawer header {
+  height: 8rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 2rem;
+  background-color: rgb(29, 26, 24);
+}
+#side-drawer ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0;
+  padding: 4rem 1rem;
+}
+
+#side-drawer li {
+  margin-top: 1rem;
+}
+
+#side-drawer a {
+  font-size: 3rem;
+  color: rgb(253, 239, 213);
+}
+
+/* Hero Section */
+
+.hero-header {
+  color: rgb(238, 164, 80);
+  font-size: 4.8rem;
+  text-align: center;
+}
+
+/* Highlights Section */
+
+#highlights {
+  width: 80%;
+  /* display: flex;
+    justify-content: center;
+    align-items: center; */
+  margin: 5rem auto 5rem auto;
+}
+
+#highlights ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.6rem;
+  padding: 0;
+  margin: 0;
+}
+#highlights ul li {
+  background-color: rgb(228, 206, 182);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+article img {
+  object-fit: cover;
+  width: 100%;
+  height: 24rem;
+  border-radius: 1rem;
+}
+
+.description {
+  padding: 1.6rem;
+  text-align: center;
+  margin-bottom: 1.6rem;
+}
+.description h2 {
+  font-size: 2.5rem;
+}
+
+.btn {
+  font-size: 1.7rem;
+  background-color: rgb(238, 164, 80);
+  color: #fff;
+  padding: 0.8rem 1.8rem;
+  border-radius: 4px;
+  transition: background-color 0.2s ease-in;
+}
+
+.btn:hover {
+  background-color: rgb(221, 134, 34);
+}
+
+/* Breakpoint at 880px for tablets  */
+
+/* @media (max-width: 880px) {
+
+    .hero-header{
+        font-size: 4.2rem;
+    }
+    #highlights ul{
+        gap:2rem;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+
+    }
+} */
+
+@media (max-width: 768px) {
+  #highlights ul {
+    grid-template-columns: 100%;
+  }
+
+  .hero-header {
+    font-size: 2.4rem;
+    margin-top: 3rem;
+    margin-bottom: -1.7rem;
+  }
+  #main-header nav {
+    display: none;
+  }
+  .menu-btn {
+    display: flex;
+  }
+}
